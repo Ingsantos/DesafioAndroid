@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".views.RegisterActivity"/>
         <activity android:name=".views.LoginActivity"/>
         <activity android:name=".views.MainActivity"/>
         <activity android:name=".views.SplashActivity">
