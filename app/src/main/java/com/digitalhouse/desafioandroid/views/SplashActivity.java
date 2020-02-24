@@ -30,6 +30,6 @@ public class SplashActivity extends AppCompatActivity {
 
     private void timerJumper (){
         timer.cancel();
-        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        startActivity(new Intent(SplashActivity.this, LoginActivity.class));
     }
 }
