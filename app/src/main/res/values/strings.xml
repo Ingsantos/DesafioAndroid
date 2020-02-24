@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DesafioAndroid</string>
+    <string name="EnterEmail">Email</string>
+    <string name="EnterPassword">Password</string>
+    <string name="SignIn">Sign In</string>
+    <string name="Option">OR</string>
+    <string name="Register">Register</string>
 </resources>
