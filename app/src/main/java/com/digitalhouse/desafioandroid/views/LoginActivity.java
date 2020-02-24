@@ -90,4 +90,6 @@ public class LoginActivity extends AppCompatActivity {
         tvOptionOr = findViewById(R.id.textViewOr);
         btnRegister = findViewById(R.id.buttonRegister);
     }
+
+    
 }
