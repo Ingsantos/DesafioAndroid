@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        btnRegister.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, MainActivity.class)));
+        btnRegister.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
     }
 
     @Override
@@ -91,5 +91,5 @@ public class LoginActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.buttonRegister);
     }
 
-    
+
 }
