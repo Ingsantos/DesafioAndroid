@@ -42,6 +42,7 @@ public class MenuFragment extends Fragment implements RestaurantListener {
         adapter = new RestaurantRecyclerViewAdapter(getMyList(), this);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRecyclerView.setAdapter(adapter);
 
         // Inflate the layout for this fragment
         return view;
