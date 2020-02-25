@@ -1,6 +1,8 @@
 package com.digitalhouse.desafioandroid.views;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 import android.content.Intent;
 import android.os.Bundle;
 import com.digitalhouse.desafioandroid.R;
@@ -13,6 +15,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //
+        replaceFragment(new MenuFragment());
+
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.containerView, fragment).commit();
     }
 }

@@ -14,6 +14,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="@string/EnterEmail"
+        android:fontFamily="@font/roboto"
         android:textColorHint="@color/hintGrey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +25,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/Font"/>
+            android:textColor="@color/Font"
+            android:fontFamily="@font/roboto"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -34,6 +36,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="@string/EnterPassword"
+        android:fontFamily="@font/roboto"
         android:textColorHint="@color/hintGrey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +50,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/Font" />
+            android:textColor="@color/Font"
+            android:fontFamily="@font/roboto"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -58,6 +62,7 @@
         android:layout_marginRight="20dp"
         android:backgroundTint="@color/colorAccent"
         android:text="@string/SignIn"
+        android:fontFamily="@font/roboto"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,6 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Option"
+        android:fontFamily="@font/roboto"
         android:textColor="@color/hintGrey"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -86,6 +92,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="@string/Register"
+        android:fontFamily="@font/roboto"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
