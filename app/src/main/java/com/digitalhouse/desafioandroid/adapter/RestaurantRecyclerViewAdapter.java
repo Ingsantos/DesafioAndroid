@@ -37,6 +37,12 @@ public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<Restaura
         final RestaurantModel restaurantModel = restaurantModelsList.get(position);
         holder.onBind(restaurantModel);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                restaurantListener.enviaRestaurante(restaurantModel);
+            }
+        });
     }
 
     @Override
@@ -48,6 +54,8 @@ public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<Restaura
     public class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView mImageView;
         public TextView mTitleRestaurant, mDescriptionAddress, mDescriptionClose;
+        //public CardView mCardView;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -56,6 +64,7 @@ public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<Restaura
             mTitleRestaurant = itemView.findViewById(R.id.textViewRestaurantName);
             mDescriptionAddress = itemView.findViewById(R.id.textViewAddress);
             mDescriptionClose = itemView.findViewById(R.id.textViewTimeClose);
+            //mCardView = itemView.findViewById(R.id.cardview_id);
         }
 
         public void onBind(RestaurantModel restaurantModel) {
