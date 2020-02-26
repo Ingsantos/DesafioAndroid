@@ -84,11 +84,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void initViews(){
-        tilEmail = findViewById(R.id.textInputLayoutEmail);
-        tilPassword = findViewById(R.id.textInputLayoutPassword);
+        tilEmail = findViewById(R.id.textInputLayoutEmailProfile);
+        tilPassword = findViewById(R.id.textInputLayoutPasswordProfile);
         btnSignIn = findViewById(R.id.buttonSignIn);
         tvOptionOr = findViewById(R.id.textViewOr);
-        btnRegister = findViewById(R.id.buttonRegister);
+        btnRegister = findViewById(R.id.buttonSave);
     }
 
 
