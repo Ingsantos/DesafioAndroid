@@ -15,7 +15,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -77,11 +76,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void initViews(){
-        tilName = findViewById(R.id.textInputLayoutName);
-        tilEmail = findViewById(R.id.textInputLayoutEmail);
-        tilPassword = findViewById(R.id.textInputLayoutPassword);
-        tillConfirmPassword = findViewById(R.id.textInputLayoutConfirmPassword);
-        btnRegister = findViewById(R.id.buttonRegister);
+        tilName = findViewById(R.id.textInputLayoutNameProfile);
+        tilEmail = findViewById(R.id.textInputLayoutEmailProfile);
+        tilPassword = findViewById(R.id.textInputLayoutPasswordProfile);
+        tillConfirmPassword = findViewById(R.id.textInputLayoutConfirmPasswordProfile);
+        btnRegister = findViewById(R.id.buttonSave);
     }
 
     private boolean isEmpty (TextInputLayout viewName){
