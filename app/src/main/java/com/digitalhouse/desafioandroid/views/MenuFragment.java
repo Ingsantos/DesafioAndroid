@@ -14,6 +14,8 @@ import com.digitalhouse.desafioandroid.R;
 import com.digitalhouse.desafioandroid.adapter.RestaurantRecyclerViewAdapter;
 import com.digitalhouse.desafioandroid.interfaces.RestaurantListener;
 import com.digitalhouse.desafioandroid.model.RestaurantModel;
+import com.digitalhouse.desafioandroid.repository.RepositoryFactory;
+import com.digitalhouse.desafioandroid.repository.RestaurantRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,9 +28,11 @@ public class MenuFragment extends Fragment implements RestaurantListener {
     public static final String RESTAURANT_KEY = "restaurante";
     private RecyclerView mRecyclerView;
     private RestaurantRecyclerViewAdapter adapter;
+    private RestaurantRepository restaurantRepository;
 
     public MenuFragment() {
         // Required empty public constructor
+        this.restaurantRepository = RepositoryFactory.getRestaurantRepository();
     }
 
 
@@ -67,14 +71,14 @@ public class MenuFragment extends Fragment implements RestaurantListener {
     }
 
     private List<RestaurantModel> getMyList(){
-        List<RestaurantModel> restaurantes = new ArrayList<>();
-
-        restaurantes.add(new RestaurantModel("Tony Roma's", "Av. Lavandisca, 717 - Indianópolis, São Paulo","Fecha às 22:00",R.drawable.image0));
-        restaurantes.add(new RestaurantModel("Aoyama - Moema", "Alameda dos Arapanés, 532 - Moema", "Fecha às 00:00",R.drawable.image1));
-        restaurantes.add(new RestaurantModel("Outback - Moema", "Av. Moaci, 187, 187 - Moema, São Paulo","Fecha às 00:00",R.drawable.image2));
-        restaurantes.add(new RestaurantModel("Sí Señor!", "Alameda Jauaperi, 626 - Moema", "Fecha às 01:00",R.drawable.image3));
-
-        return restaurantes;
-
+//        List<RestaurantModel> restaurantes = new ArrayList<>();
+//
+//        restaurantes.add(new RestaurantModel("Tony Roma's", "Av. Lavandisca, 717 - Indianópolis, São Paulo","Fecha às 22:00",R.drawable.image0));
+//        restaurantes.add(new RestaurantModel("Aoyama - Moema", "Alameda dos Arapanés, 532 - Moema", "Fecha às 00:00",R.drawable.image1));
+//        restaurantes.add(new RestaurantModel("Outback - Moema", "Av. Moaci, 187, 187 - Moema, São Paulo","Fecha às 00:00",R.drawable.image2));
+//        restaurantes.add(new RestaurantModel("Sí Señor!", "Alameda Jauaperi, 626 - Moema", "Fecha às 01:00",R.drawable.image3));
+//
+//        return restaurantes;
+        return restaurantRepository.getRestaurantList();
     }
 }

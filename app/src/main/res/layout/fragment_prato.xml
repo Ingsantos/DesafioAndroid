@@ -4,20 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".views.CardapioFragment">
+    tools:context=".views.PratoFragment">
 
     <ImageView
-        android:id="@+id/imageViewRestaurantCardapio"
+        android:id="@+id/imageViewRestaurantCardapioPrato"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:contentDescription="@string/nome_restaurante"
         android:scaleType="centerCrop"
-        android:src="@drawable/splash"/>
-    <androidx.recyclerview.widget.RecyclerView
+        android:src="@drawable/splash" />
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingRight="5dp"
-        android:paddingLeft="5dp"
-        android:id="@+id/cardapio_list"/>
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/textViewDescriptionCardapioPrato"/>
 
 </LinearLayout>
