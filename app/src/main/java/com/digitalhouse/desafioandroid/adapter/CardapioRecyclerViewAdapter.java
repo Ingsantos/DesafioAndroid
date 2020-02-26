@@ -38,6 +38,14 @@ public class CardapioRecyclerViewAdapter extends RecyclerView.Adapter<CardapioRe
         final CardapioModel cardapioModel = cardapioModelList.get(position);
         holder.onBindOther(cardapioModel);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cardapioListener.enviaCardapio(cardapioModel);
+            }
+        });
+
+
     }
 
     @Override
