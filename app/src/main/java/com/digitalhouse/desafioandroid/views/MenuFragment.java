@@ -23,9 +23,9 @@ import java.util.List;
  */
 public class MenuFragment extends Fragment implements RestaurantListener {
 
+    public static final String RESTAURANT_KEY = "restaurante";
     private RecyclerView mRecyclerView;
     private RestaurantRecyclerViewAdapter adapter;
-    public static final String RESTAURANT_KEY = "restaurante";
 
     public MenuFragment() {
         // Required empty public constructor
@@ -51,6 +51,19 @@ public class MenuFragment extends Fragment implements RestaurantListener {
     @Override
     public void enviaRestaurante(RestaurantModel restaurantModel) {
 
+        Fragment fragment = new CardapioFragment();
+        Bundle bundle = new Bundle();
+        bundle.putParcelable(RESTAURANT_KEY, restaurantModel);
+        fragment.setArguments(bundle);
+
+        replaceFragment(fragment);
+
+    }
+
+    private void replaceFragment(Fragment fragment){
+        getActivity().getSupportFragmentManager()
+                .beginTransaction().replace(R.id.container, fragment)
+                .commit();
     }
 
     private List<RestaurantModel> getMyList(){

@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         replaceFragment(new MenuFragment());
     }
 
+
     private void replaceFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, fragment).commit();
