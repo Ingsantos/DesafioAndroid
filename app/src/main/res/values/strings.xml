@@ -6,4 +6,9 @@
     <string name="Option">OR</string>
     <string name="Register">Register</string>
     <string name="save_profile">Save profile</string>
+    <string name="nome_restaurante">Nome restaurante</string>
+    <string name="endereco_restaurante">Endereço restaurante</string>
+    <string name="fecha_horario">Fecha horário</string>
+    <string name="food_name">Food\'s name</string>
+    <string name="description">Description</string>
 </resources>
