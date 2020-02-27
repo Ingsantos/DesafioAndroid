@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -72,6 +73,9 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+        setContentView(R.layout.activity_register);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
     }
 
@@ -96,6 +100,25 @@ public class RegisterActivity extends AppCompatActivity {
         String view= getString(viewName_1);
         String view_1 = getString(viewName_2);
         return view.equals(view_1);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                startActivity(new Intent(this, LoginActivity.class));
+                finishAffinity();
+                break;
+            default:break;
+        }
+        return true;
+    }
+
+    @Override
+    public void onBackPressed(){
+        startActivity(new Intent(this, LoginActivity.class));
+        finishAffinity();
+        return;
     }
 
 }

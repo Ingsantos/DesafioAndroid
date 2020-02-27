@@ -45,7 +45,6 @@ public class CardapioRecyclerViewAdapter extends RecyclerView.Adapter<CardapioRe
             }
         });
 
-
     }
 
     @Override
