@@ -11,4 +11,17 @@
     <string name="fecha_horario">Fecha horário</string>
     <string name="food_name">Food\'s name</string>
     <string name="description">Description</string>
+    <string name="nullFieldsRegister">To sign up you need to fulfill this field"</string>
+    <string name="empty">"To sign up you need to fulfill this field"</string>
+    <string name="confirmPassword">"Password and confirm password need to be equals to sign up"</string>
+    <string name="error">SingUp unsucessfull, please try again</string>
+    <string name="login">You\'re logged in</string>
+    <string name="loginLog">"Please log in"</string>
+    <string name="emptyLogin">To sign in you need to fulfill this field</string>
+    <string name="emailPasswordInvalid">Login error, email/password is not valid</string>
+    <string name="errorLogin">Error occurred!</string>
+    <string name="user_Jess">Jessica Corrêa</string>
+    <string name="fakePassword">SenhaFake</string>
+    <string name="fakeEmail">fakeemail@email.com</string>
+
 </resources>

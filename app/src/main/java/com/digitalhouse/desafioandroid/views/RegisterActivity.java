@@ -35,22 +35,22 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isEmpty(tilName)){
-                    tilName.setError("To sign up you need to fulfill this field");
+                    tilName.setError(getString(R.string.nullFieldsRegister));
                     tilEmail.setError(null);
                     tilPassword.setError(null);
                     tilName.requestFocus();
                 } else if (isEmpty(tilEmail)){
-                    tilEmail.setError("To sign up you need to fulfill this field");
+                    tilEmail.setError(getString(R.string.empty));
                     tilName.setError(null);
                     tilPassword.setError(null);
                     tilEmail.requestFocus();
                 } else if (isEmpty(tilPassword)){
-                    tilPassword.setError("To sign up you need to fulfill this field");
+                    tilPassword.setError(getString(R.string.empty));
                     tilEmail.setError(null);
                     tilName.setError(null);
                     tilName.requestFocus();
                 } else if (!isEquals(tillConfirmPassword, tilPassword)){
-                    tillConfirmPassword.setError("Password and confirm password need to be equals to sign up");
+                    tillConfirmPassword.setError(getString(R.string.confirmPassword));
                     tilPassword.setError(null);
                     tilEmail.setError(null);
                     tilName.setError(null);
@@ -63,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()){
                                 Toast.makeText(RegisterActivity.this,
-                                        "SingUp unsucessfull, please try again", Toast.LENGTH_LONG).show();
+                                        getString(R.string.error), Toast.LENGTH_LONG).show();
                             } else {
                                 startActivity( new Intent(RegisterActivity.this, MainActivity.class));
                             }

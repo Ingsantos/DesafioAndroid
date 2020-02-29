@@ -21,8 +21,6 @@ import java.util.Timer;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView helloWorld;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

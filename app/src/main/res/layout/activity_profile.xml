@@ -21,6 +21,7 @@
         app:layout_constraintVertical_bias="0.080">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:text="@string/user_Jess"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/Font"/>
@@ -42,6 +43,7 @@
         app:layout_constraintVertical_bias="0.020">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:text="@string/fakeEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/Font"/>
@@ -65,6 +67,7 @@
         app:passwordToggleTint="@color/Font">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:text="@string/fakePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/Font" />
@@ -87,6 +90,7 @@
         app:passwordToggleTint="@color/Font">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:text="@string/fakePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/Font" />

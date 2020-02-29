@@ -37,7 +37,6 @@ public class CardapioRecyclerViewAdapter extends RecyclerView.Adapter<CardapioRe
     public void onBindViewHolder(@NonNull OtherViewHolder holder, int position) {
         final CardapioModel cardapioModel = cardapioModelList.get(position);
         holder.onBindOther(cardapioModel);
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,20 +52,17 @@ public class CardapioRecyclerViewAdapter extends RecyclerView.Adapter<CardapioRe
     }
 
     public class OtherViewHolder extends RecyclerView.ViewHolder{
-
         public ImageView mImageViewCardapio;
         public TextView mTextViewCardapio;
 
         public OtherViewHolder(@NonNull View itemView) {
             super(itemView);
-
             mImageViewCardapio = itemView.findViewById(R.id.imageViewCardapio);
             mTextViewCardapio = itemView.findViewById(R.id.textViewCardapio);
         }
 
         public void onBindOther(CardapioModel cardapioModel) {
             mTextViewCardapio.setText(cardapioModel.getTitleFood());
-
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
                 Drawable drawable = itemView.getResources().getDrawable(cardapioModel.getImageFood());
                 mImageViewCardapio.setImageDrawable(drawable);
