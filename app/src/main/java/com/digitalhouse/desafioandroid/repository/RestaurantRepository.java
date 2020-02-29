@@ -25,14 +25,4 @@ public class RestaurantRepository {
         return this.restaurantes;
     }
 
-    public RestaurantModel findByTitle(String titleRestaurant){
-        for(RestaurantModel restaurant : restaurantes){
-            if(restaurant.getTitleRestaurant().equals(titleRestaurant)){
-                return restaurant;
-            }
-        }
-        return null;
-    }
-
-
 }

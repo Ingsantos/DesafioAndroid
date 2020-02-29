@@ -34,37 +34,35 @@ public class LoginActivity extends AppCompatActivity {
 
             if (mFirebaseUser != null){
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                Toast.makeText(LoginActivity.this, "You're logged in", Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginActivity.this,getString(R.string.login), Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(LoginActivity.this, "Please log in", Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginActivity.this, getString(R.string.loginLog), Toast.LENGTH_LONG).show();
             }
         };
 
         btnSignIn.setOnClickListener(v -> {
             if (isEmpty(tilEmail)){
-                tilEmail.setError("To sign in you need to fulfill this field");
+                tilEmail.setError(getString(R.string.emptyLogin));
                 tilPassword.setError(null);
                 tilEmail.requestFocus();
             } else if (isEmpty(tilPassword)){
-                tilPassword.setError("To sign in you need to fulfill this field");
+                tilPassword.setError(getString(R.string.emptyLogin));
                 tilEmail.setError(null);
                 tilPassword.requestFocus();
             } else if (!isEmpty(tilEmail) && !isEmpty(tilPassword)){
                 tilEmail.setError(null);
                 tilPassword.setError(null);
-
                 mFirebaseAuth.signInWithEmailAndPassword(getString(tilEmail), getString(tilPassword)).addOnCompleteListener(LoginActivity.this, task -> {
                     if (!task.isSuccessful()){
-                        Toast.makeText(LoginActivity.this, "Login error, email/password is not valid", Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, getString(R.string.emailPasswordInvalid), Toast.LENGTH_LONG).show();
                     } else {
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     }
                 });
             } else {
-                Toast.makeText(LoginActivity.this, "Error occurred!", Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginActivity.this, getString(R.string.errorLogin), Toast.LENGTH_LONG).show();
             }
         });
-
         btnRegister.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
     }
 
@@ -90,6 +88,4 @@ public class LoginActivity extends AppCompatActivity {
         tvOptionOr = findViewById(R.id.textViewOr);
         btnRegister = findViewById(R.id.buttonSave);
     }
-
-
 }
